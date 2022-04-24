@@ -1,0 +1,49 @@
+@use "variables";
+
+main {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  padding: 1em;
+  overflow: hidden;
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .content {
+      display: flex;
+      flex-direction: row;
+      
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .details {
+        flex: 4;
+      }
+    }
+    #title {
+      text-align: center;
+      font-size: xx-large;
+      font-weight: 400;
+    }
+    #subtitle {
+      text-align: center;
+      font-size: large;
+      font-weight: 500;
+    }
+    #knowledges {
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 1em;
+      }
+    }
+  }
+  .container:not(:last-child) {
+    border-bottom: 4px solid black;
+  }
+}

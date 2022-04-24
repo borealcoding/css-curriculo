@@ -1,0 +1,40 @@
+@use "variables";
+
+aside {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: variables.$asideBgColor;
+  color: variables.$asideFontColor;
+  margin: 1em 1em 1em 1em;
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 1em;
+    #networks {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      img {
+        margin: 1em;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    progress {
+        margin-bottom: 1em;
+    }
+  }
+  .container:first-child {
+    margin: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .container:not(:first-child, :last-child) {
+    padding-bottom: 1em;
+    border-bottom: 4px solid black;
+  }
+}
